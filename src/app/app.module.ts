@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormularioModule } from './formulario/formulario.module';
-import { LoginComponent } from './formulario/login/login.component';
+import { RegistroComponent } from './registro/registro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormularioModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

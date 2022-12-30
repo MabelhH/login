@@ -1,0 +1,24 @@
+
+<div class="registro">
+    <div class="container">
+        <form [formGroup]="formularioRegistro" id="login-form" class="form" action="" method="post">
+             <h3 class="text-center text-info">Login</h3>           
+                <div class="row mb-4 cuadro">
+                  <label for="usuario" class="col-sm-2 col-form-label">Usuario:</label>
+                  <div class="col-sm-9">
+                    <input formControlName="usuario" type="text" class="form-control" id="usuario" required>
+                  </div>
+                </div>
+                <div class="row mb-4 cuadro">
+                  <label for="conseña" class="col-sm-2 col-form-label">Password:</label>
+                  <div class="col-sm-9">
+                    <input formControlName="password" type="password" class="form-control" id="conseña">
+                  </div>
+                </div>             
+            <div class="form-group text-center">
+                 <button [disabled]="!formularioRegistro.value" type="button" class="btn btn-info" (click)="guardar()">guardar</button>       
+             </div> 
+        </form> 
+    </div>
+</div>
+
