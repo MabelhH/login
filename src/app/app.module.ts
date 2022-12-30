@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Login02Component } from './login02/login02.component';
+import { FormularioModule } from './formulario/formulario.module';
+import { LoginComponent } from './formulario/login/login.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Login02Component
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormularioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
