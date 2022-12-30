@@ -11,19 +11,24 @@ export class RegistroComponent  implements OnInit {
     usuario:new FormControl('angular',[Validators.required]),
     password:new FormControl('123456',[Validators.required])
 
-  });
+  }); 
+  validacion=false;
+  isSubmit=false
 
-  constructor(
-    
-){}
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit() { }
 
   guardar(){
-    console.log(this.formularioRegistro.value);
-    console.log('formulario valido',this.formularioRegistro.valid)
+    this.isSubmit=true
+    const usuario=this.formularioRegistro.controls['usuario'].value
+    const password=this.formularioRegistro.controls['password'].value
+    
+    if(usuario=='angular'&& password=='123456'){
+    return this.validacion=true;
+    }else{
+      return this.validacion=false;
+    }
+
+
   }
 
   

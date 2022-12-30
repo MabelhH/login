@@ -1,7 +1,7 @@
 
 <div class="registro">
     <div class="container">
-        <form [formGroup]="formularioRegistro" id="login-form" class="form" action="" method="post">
+        <form [formGroup]="formularioRegistro" id="login-form" class="form" action="" method="post" #ngForm="ngForm">
              <h3 class="text-center text-info">Login</h3>           
                 <div class="row mb-4 cuadro">
                   <label for="usuario" class="col-sm-2 col-form-label">Usuario:</label>
@@ -21,4 +21,13 @@
         </form> 
     </div>
 </div>
+
+<div *ngIf="validacion">
+   <p>usuario</p>
+   <p>password</p>
+   
+</div>
+ <div *ngIf="!validacion && isSubmit">
+    <p>the home</p>
+</div> 
 
